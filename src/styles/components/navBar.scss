@@ -1,0 +1,12 @@
+.header{
+    &__navList{
+        display: flex;
+    }
+    &__listItem{
+        list-style: none;
+    }
+    &__link{
+        color: blue;
+        text-decoration: none;
+    }
+}

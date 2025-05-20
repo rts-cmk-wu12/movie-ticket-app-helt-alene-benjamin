@@ -1,0 +1,24 @@
+@use "../variabels.scss";
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    &__list{
+    display: flex;
+  
+    
+    padding: 0 8%;
+    justify-content: space-between;
+    }
+    &__listItem{
+        list-style: none;
+    }
+    &__link{
+        color: variabels.$iconGrey;
+        font-size: 1.5rem;
+        transition: 0.4s;
+        &:hover{
+            color: white;
+        }
+    }
+}
