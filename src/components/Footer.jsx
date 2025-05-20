@@ -14,8 +14,8 @@ export default function Footer(){
                 <li className="footer__listItem">
                     <NavLink className="footer__link" to="/"><FaHouse className="footer__icon" /></NavLink>
                      </li>
-                    <li className="footer__listItem"><NavLink className="footer__link" to="/"><FaCompass className="footer__icon" /></NavLink></li>
-                   <li className="footer__listItem"> <NavLink className="footer__link"  to="/ExploreMovies"><CiBookmarkMinus className="footer__icon" /></NavLink>
+                    <li className="footer__listItem"><NavLink className="footer__link" to="/ExploreMovies"><FaCompass className="footer__icon" /></NavLink></li>
+                   <li className="footer__listItem"> <NavLink className="footer__link"  to="/test"><CiBookmarkMinus className="footer__icon" /></NavLink>
                    </li>
                    <li className="footer__listItem"> <NavLink className="footer__link" to="/index"><IoPerson className="footer__icon" /></NavLink></li>
 

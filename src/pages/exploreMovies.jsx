@@ -9,8 +9,17 @@ export default function ExploreMovies(){
             setPopular(await fetcher("https://api.themoviedb.org/3/movie/popular?language=en-US&page=1","GET"))
             
         } tester()}, [])
+         const [recommended, setRecomended] = useState([])
+      useEffect(()=>{ async function tester() {
+            setRecomended(await fetcher("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1","GET"))
+            
+        } tester()}, [])
 return(
+    <>
         <MoviesRow posterPath rating heading="Top Movies"  headingFontSize="1.25rem" imgHeigth="250px" movieWidth="11.8rem" data={popular}></MoviesRow>
+        <MoviesRow releaseDate posterPath rating heading="Recommended"  headingFontSize="1.25rem" imgHeigth="11.8rem" movieWidth="7.6rem" data={recommended}></MoviesRow>
+
+        </>
 )
 
 

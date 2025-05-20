@@ -7,5 +7,8 @@ export default async function fetcher(url = null, method = "GET"){
   }  })
  let data = await response.json()
  console.log(data?.results)
- return data?.results
+ if(data?.results == undefined){ 
+  return data}
+ else{ return data?.results}
+ 
 }
