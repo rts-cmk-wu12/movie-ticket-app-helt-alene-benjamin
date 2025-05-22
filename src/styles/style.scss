@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{background-color: variabels.$backgroundBlue;}
+body{background-color: variabels.$backgroundBlue;
+    padding-bottom: 10rem;
+}
 #root{
     max-width: 90%;
     margin: 0 auto;

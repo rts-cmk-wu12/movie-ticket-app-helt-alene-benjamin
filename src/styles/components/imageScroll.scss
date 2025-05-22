@@ -1,0 +1,12 @@
+.imageScroll{
+    display: flex;
+    overflow: scroll;
+    gap: 1.5rem;
+    height: 70vh;
+    &__img{
+        object-fit: cover;
+        width: 85%;
+       
+        border-radius: 20px;    
+    }
+}

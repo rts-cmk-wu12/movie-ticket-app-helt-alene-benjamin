@@ -15,12 +15,12 @@ import fetcher from './functions/fetch'
 
   return (
     <>
-    <NavBar></NavBar>
-    <main>
+    
+   
      <Suspense fallback={<p>Loading...</p>}>
       {useRoutes(routes)}
     </Suspense>
-    </main>
+   
     <Footer></Footer>
     </>
   )
