@@ -17,7 +17,7 @@ export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats }) {
             <h2 className="cinema__screen">Screen</h2>
         <div className="cinema__view">
             {rows.map((element,index) => {
-                console.log(element.align)
+               
                 //her kører jeg en map på rowen
 
                 return ( <div key={index} style={{justifyItems: element.align}} className="cinema__collection">
@@ -45,7 +45,7 @@ export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats }) {
                                     return (
                                     <>
                                    
-                                    {found == undefined ?<div id={letter} onClick={(evt)=>{evt.target.classList.toggle("cinema__seat--selected")}}  key={index} className="cinema__seat">{""}</div>:  <div id={rowIndex + [letter]}   key={index} className="cinema__seat cinema__seat--ocupied">{""}</div>}
+                                    {found == undefined ?<div  id={letter} onClick={(evt)=>{evt.target.classList.toggle("cinema__seat--selected")}}  key={index} className="cinema__seat">{""}</div>:  <div id={rowIndex + [letter]}   key={index} className="cinema__seat cinema__seat--ocupied">{""}</div>}
                                     </>
                             )
                                 

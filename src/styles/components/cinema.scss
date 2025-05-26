@@ -28,7 +28,7 @@
         background-color: variabels.$lightBlue;
         border: 1px solid transparent;
         &:hover{
-            background-color: orange;
+           border: 1px solid variabels.$red;
         }
     }
     &--ocupied{

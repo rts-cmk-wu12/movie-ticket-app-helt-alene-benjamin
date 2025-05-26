@@ -12,7 +12,7 @@ export default function Index(){
     return(
         <>
       
-        <MoviesRow releaseDate heading="Upcomming"  headingFontSize="1.25rem" imgHeigth="180px" movieWidth="19.6rem" data={commingSoon}></MoviesRow>
+        <MoviesRow releaseDate  heading="Upcomming"   headingFontSize="1.25rem" imgHeigth="180px" movieWidth="19.6rem" data={commingSoon}></MoviesRow>
         </>
     )
 }
