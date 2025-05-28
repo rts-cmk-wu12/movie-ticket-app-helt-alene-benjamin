@@ -30,7 +30,7 @@ const id  = getparams("film")
         <MiniFilmInfo givenClass="detailsSection" title={detailed?.title} rating={detailed?.vote_average /2} director={detailed?.credits?.crew} runTime={detailed?.runtime} genres={detailed?.genres}></MiniFilmInfo>
         <h3 className="detailsSection__synopsisHeading">Synopsis</h3>
         <ReadMoreText givenClass={"detailsSection"} maxWords={30}>{detailed?.overview}</ReadMoreText>
-        <LinkButton url={`/BuyTicket?film=${detailed?.title}`} >Buy Ticket</LinkButton>
+        <LinkButton url={`/buyticket?film=${detailed?.title}`} >Buy Ticket</LinkButton>
         </article>
 
        
