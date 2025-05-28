@@ -4,7 +4,6 @@ import {
   useRoutes
 } from 'react-router-dom'
 import routes from '~react-pages'
-import NavBar from './components/navBar'
 import "./styles/style.scss"
 import Footer from './components/Footer'
 import fetcher from './functions/fetch'
