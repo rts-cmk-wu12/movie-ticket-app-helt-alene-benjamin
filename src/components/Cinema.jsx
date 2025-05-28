@@ -4,6 +4,8 @@ import { useState } from "react";
 export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats }) {
     //her laver jeg et nyt array så den kan køre pr row
     const [color, setColor] = useState("black")
+    //chosen seats er det array der indeholder de chosen seats
+    let chosenSeats = []
     //dette object bruges til a kategorisere sæderne med bogstaver også
     const letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n"]
     //dette er det objekt der bruges til at sætte talene i system det behøver ikke at være udfyldt til starten
@@ -45,7 +47,7 @@ export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats }) {
                                     return (
                                     <>
                                    
-                                    {found == undefined ?<div  id={letter} onClick={(evt)=>{evt.target.classList.toggle("cinema__seat--selected")}}  key={index} className="cinema__seat">{""}</div>:  <div id={rowIndex + [letter]}   key={index} className="cinema__seat cinema__seat--ocupied">{""}</div>}
+                                    {found == undefined ?<div  id={letter} onClick={(evt)=>{evt.target.classList.toggle("cinema__seat--selected") + addRemoveSeat(evt) + console.log(chosenSeats)}}  key={index} className="cinema__seat">{""}</div>:  <div id={rowIndex + [letter]}   key={index} className="cinema__seat cinema__seat--ocupied">{""}</div>}
                                     </>
                             )
                                 
@@ -64,4 +66,19 @@ export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats }) {
             </div>
         
         )
+
+        function addRemoveSeat(evt){
+            let index = chosenSeats.indexOf(evt.target.id)
+        
+            if(evt.target.classList.item(1)){
+                 
+                chosenSeats.push(evt.target.id)
+
+                }else{ 
+                
+
+             chosenSeats.splice(index,1)
+            }
+                
+        }
 }

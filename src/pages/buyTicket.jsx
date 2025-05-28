@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Cinema from "../components/Cinema"
 import CustomForm from "../components/CustomForm"
 import DropDownInput from "../components/DropDownInput"
@@ -6,23 +6,29 @@ import Header from "../components/Header"
 import fetcher from "../functions/fetch"
 import getparams from "../functions/getparams"
 import "../styles/pages/buyTicket.scss"
+import { CinemaInfoContext } from "../Context"
 export default function BuyTicket(){
     //her fetcher jeg cinemas som er magnuses api...der indeholder data om biografer
     const [cinemas, setCinemas] = useState([])
+    const {cinemaInfo, setCinemainfo} = useContext(CinemaInfoContext)
+    console.log(cinemaInfo)
     const [currentCinema, setCurrentCinema] = useState("")
-    
+    console.log(cinemaInfo)
     
         useEffect(()=>{ async function tester() {
             setCinemas(await fetcher(`https://cdn.jsdelivr.net/gh/Sh3dow-ware/cinema-data@v1.0.1/cinema-data.json`,"GET", true))
-            
-        } tester()}, [])
+            setCinemainfo("er")
+        } tester()}, [])    
 
       
     const film = getparams("film")
 
 
     let test =cinemas?.find((cinema) => cinema.name == currentCinema)
-   
+     
+    //her tager jeg fat i filmen man har klikket på og opdatere min context til den
+     
+
     return (
         <>
         <Header heading={"Select Seats"} ></Header>
