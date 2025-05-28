@@ -1,6 +1,6 @@
 import convertTime from "../functions/convertTime.js"
 import findObjects from "../functions/findObjects.js"
-import "../styles/components/minifilminfo.scss"
+import "../styles/components/minifilmInfo.scss"
 
 export default function MiniFilmInfo({title,director, rating, genres, runTime, givenClass = "miniFilmInfo "}){
    const newDirector =  findObjects(director,"job", "Director")
