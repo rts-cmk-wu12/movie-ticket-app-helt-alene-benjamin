@@ -1,0 +1,22 @@
+@use "../variabels.scss";
+.detailsSection {
+    
+    &__synopsisHeading{
+        font-size: 1.25rem;
+        color: variabels.$movieHeading;
+        font-family: variabels.$poppins;
+        margin-top: 1.5rem;
+    }
+    &__text{
+        
+        margin-top: 0.75rem;
+        color: variabels.$textGrey;
+        font-size: 0.875rem;
+        font-family: variabels.$poppins;
+
+    }
+    &__readMore{
+        cursor: pointer;
+        color: variabels.$lightBlue;
+    }
+}

@@ -1,0 +1,15 @@
+@use "../variabels.scss";
+.headerSide{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: space-between;
+    &__heading{
+        font-size: 1.25rem;
+        color: variabels.$movieHeading;
+        font-family: variabels.$poppins;
+    }
+    &__icon{
+      color: variabels.$movieHeading;
+      font-size: 1.5rem;
+    }
+}

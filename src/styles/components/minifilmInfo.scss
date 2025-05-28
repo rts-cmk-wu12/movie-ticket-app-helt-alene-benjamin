@@ -1,0 +1,35 @@
+@use "../variabels.scss";
+.miniFilmInfo{
+    margin-top: 0.8rem;
+     font-family: variabels.$poppins;
+    &__heading{
+   margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: variabels.$movieHeading;
+    }
+    &__directorDiv{
+        display: flex;
+        font-size: 0.875rem;
+        color: variabels.$thinDarkGrey;
+    }
+    /*Jeg er lidt sur over jeg ikk har lavet genres div til et komponent endnu...men gør det som sidste priotet*/
+    &__factBoxesDiv{
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+    }
+    &__factBox{
+        transition: 0.4s;
+        padding: 0.25rem 0.875rem;
+        border-radius: 0.5rem;
+        color: variabels.$factBoxesGrey;
+        background-color: variabels.$factBoxesBackground;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.2);
+            color: variabels.$movieHeading;
+            
+        }
+
+    }
+}

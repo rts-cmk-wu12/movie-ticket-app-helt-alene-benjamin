@@ -1,0 +1,34 @@
+@use "../variabels.scss";
+
+.moviesThumb {
+    transition: 0.3s;
+    color: white;
+    font-family: variabels.$poppins;
+
+    &__heading {
+        color: variabels.$movieHeading;
+        font-family: variabels.$poppins;
+        font-weight: 600;
+        transition: 0.4s;
+    }
+    &__link{
+        text-decoration: none;
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+        object-position: top;
+    }
+
+    &:hover {
+       
+        transform: scale(1.1);
+
+    }
+}
+
+.moviesThumb:hover .moviesThumb__heading {
+    color: rgb(146, 146, 209);
+}
