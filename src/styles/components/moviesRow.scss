@@ -1,0 +1,16 @@
+@use "../variabels.scss";
+.moviesRow{
+   
+   &__flexDiv{
+ display: flex;
+    overflow-x: scroll;
+     gap: 30px;
+     padding:  1rem 0;
+   }
+   &__heading{
+    font-size: 1.25rem;
+    font-family: variabels.$poppins;
+    color: variabels.$movieHeading;
+   }
+   
+}

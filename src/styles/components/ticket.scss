@@ -1,0 +1,58 @@
+@use "../variabels.scss";
+.ticket{
+    
+    font-family: variabels.$poppins;
+    display: grid;
+    max-width: 400px;
+    margin: 0 auto;
+   height: auto;
+   grid-template-rows: repeat(6,1fr);
+   grid-template-columns: repeat(1,1fr);
+   max-height: 520px;
+    
+    &__img{
+        grid-row: 1/-1;
+        width: 100%;
+        grid-column: 1/-1;
+    }
+    &__gridDiv{
+          padding-left: 2rem;
+          margin: 2rem 0;
+        grid-column:  1/-1 ;
+       grid-row: span 1;
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
+       grid-template-rows: repeat(2,1fr);
+
+    }
+    &__textDiv{
+          padding-left: 2rem;
+          margin: 1rem 0;
+         
+        grid-row: 1;
+        grid-column: 1/-1;
+    }
+    &__miniHeading{
+        grid-column: span 1;
+        grid-row: 1;
+        color: variabels.$darkGrey;
+    }
+    &__text{
+        grid-row: 2;
+        &--red{
+            color: red;
+        }
+    }
+    &__flexDiv{
+    grid-column: 1/2;
+   
+    display: flex;
+    justify-content: space-between;
+    }
+    &__barcode{
+        justify-self: center;
+        grid-row: -1;
+
+    }
+    
+}

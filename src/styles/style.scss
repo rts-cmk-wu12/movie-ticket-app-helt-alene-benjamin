@@ -1,0 +1,32 @@
+@use "./variabels.scss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{background-color: variabels.$backgroundBlue;
+    padding-bottom: 10rem;
+}
+#root{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.input--fail{
+    background-color: red;
+}
+.buyButton{
+    width: 19.6rem;
+    color: variabels.$movieHeading;
+    text-decoration: none;
+    font-family: variabels.$poppins;
+    font-size: 1.2rem;
+    background-color: variabels.$lightBlue;
+    display: block;
+    border:  1px solid transparent;
+    margin: 1rem  auto;
+    text-align: center;
+   
+    padding: 1rem 0;
+    border-radius: 0.75rem;
+    margin-top: 4rem;
+}
