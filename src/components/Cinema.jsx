@@ -1,11 +1,12 @@
 import { DiVim } from "react-icons/di";
 import "../styles/components/cinema.scss";
-import { useState } from "react";
-export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats }) {
+import { useEffect, useState } from "react";
+export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats, setChossenSeats }) {
     //her laver jeg et nyt array så den kan køre pr row
     const [color, setColor] = useState("black")
+    const [chosenSeats, setChossnSeatsState] = useState([])
     //chosen seats er det array der indeholder de chosen seats
-    let chosenSeats = []
+    let chossenSeatsArray = chosenSeats
     //dette object bruges til a kategorisere sæderne med bogstaver også
     const letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n"]
     //dette er det objekt der bruges til at sætte talene i system det behøver ikke at være udfyldt til starten
@@ -72,13 +73,17 @@ export default function Cinema({ rows, numberOfRows = 1,ocupiedSeats }) {
         
             if(evt.target.classList.item(1)){
                  
-                chosenSeats.push(evt.target.id)
+                chossenSeatsArray.push(evt.target.id)
 
                 }else{ 
                 
 
-             chosenSeats.splice(index,1)
+             chossenSeatsArray.splice(index,1)
             }
+            console.log(chosenSeats)
+            setChossnSeatsState(chossenSeatsArray)
+            setChossenSeats(chosenSeats)
+          
                 
         }
 }

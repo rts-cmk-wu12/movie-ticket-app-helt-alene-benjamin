@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router"
 import "../styles/components/customForm.scss"
-export default function CustomForm({children, submitText = "Send", navigate, heading = "", customFunc = null, extrainputsName = []}){
+export default function CustomForm({children, submitText = "Send", navigate = "/", heading = "", customFunc = null, extrainputsName = []}){
     //extra inputs er altså dem der ikke ligger direkte inde i formconponentet
       let  navigater = useNavigate()
      //her mapper jeg alle childrens og sørger for at de alle skal have et name
@@ -35,8 +35,7 @@ export default function CustomForm({children, submitText = "Send", navigate, hea
        }
      
        
-        customFunc !== null? customFunc(formData): ""
-         navigater(navigate)
+        customFunc !== null? customFunc(formData) : navigater(navigate)
     
     }
     return(

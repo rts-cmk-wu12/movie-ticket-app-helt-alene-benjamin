@@ -18,7 +18,7 @@ import { CinemaInfoContext } from './Context'
 
   return (
     <>
-      <CinemaInfoContext.Provider value={{cinemaInfo, setCinemaInfo}} >
+      <CinemaInfoContext.Provider value={[cinemaInfo, setCinemaInfo]} >
    
      <Suspense fallback={<p>Loading...</p>}>
       {useRoutes(routes)}

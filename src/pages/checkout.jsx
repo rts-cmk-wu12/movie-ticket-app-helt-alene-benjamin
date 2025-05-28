@@ -10,8 +10,8 @@ import { CinemaInfoContext } from "../Context";
 
 export default function Checkout(){
   const [cardNumber, setCardNumber] = useState([])
-    const theme = useContext(CinemaInfoContext);
-    console.log(theme.cinemaInfo)
+  const [cinemaInfo, setCinemaInfo] = useContext(CinemaInfoContext);
+   console.log(cinemaInfo)
     
    
   
@@ -19,7 +19,7 @@ export default function Checkout(){
   const [popUp, setPopUp] = useState("")
   console.log(cardNumber)
   function test(formData){
-    theme.setcinemaInfo("HEj")
+    
      console.log(console.log(formData ))
     setPopUp(<PopUp heading={"Your payment was successful"} link="/eTicket" buttonText="See e-ticket"></PopUp>)
     console.log(popUp)
