@@ -1,0 +1,58 @@
+@use "../variabels.scss";
+.textInput{
+    
+  
+    display: flex;
+    padding: 0 1.5rem;
+    align-items: center;
+    font-size: 0.75rem;
+    font-family: variabels.$poppins;
+    border-radius: 10px;
+    color: variabels.$factBoxesGrey;
+    width: 100%;
+   
+    margin: 0.5rem auto;
+    height: 2.5rem;
+    border: 1px solid grey;
+    background-color: transparent;
+    &__label{
+        font-family: variabels.$poppins;
+        color: variabels.$movieHeading;
+        font-size: 0.75rem;
+    }
+    
+   
+}
+
+//dette er classen til når den er open 
+.dropdown__input--open .icon{
+    transform: rotate(-180deg);
+    
+}
+.dropdown__input--open{
+    color: white;
+    background-color: variabels.$backgroundBlue;
+     z-index: 2;
+}
+.dropdown__input--open{
+    color: white;
+    background-color: variabels.$backgroundBlue;
+    
+}
+.dropdown__input--open .icon{
+    z-index: -1;
+    pointer-events: none;
+  
+    
+}
+.dropdown__dropdownsDiv--open{
+    padding: 1rem 0.5rem;
+}
+
+@keyframes example {
+  from {opacity:  0;}
+  to {opacity: 1;}
+}
+.input--fail{
+    border: 1px solid variabels.$red;
+}

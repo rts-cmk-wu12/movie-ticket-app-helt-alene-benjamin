@@ -1,0 +1,15 @@
+@use "../variabels.scss";
+.linkbutton{
+    color: variabels.$movieHeading;
+    text-decoration: none;
+    font-family: variabels.$poppins;
+    font-size: 1.2rem;
+    background-color: variabels.$lightBlue;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 0.75rem;
+    margin-top: 2rem;
+   
+}

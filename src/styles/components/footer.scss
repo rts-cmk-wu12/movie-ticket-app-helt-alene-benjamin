@@ -1,0 +1,33 @@
+@use "../variabels.scss";
+.footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: variabels.$backgroundBlue;
+    padding: 1rem 0;
+     left: 0;
+    &__list{
+       
+        
+    display: flex;
+  
+    justify-content: center;
+    gap: 10rem;
+    }
+    &__listItem{
+        list-style: none;
+    }
+    &__link{
+        
+        color: variabels.$iconGrey;
+        font-size: 1.5rem;
+        transition: 0.4s;
+        &:hover{
+            color: white;
+        }
+    }
+}
+[aria-current]:not([aria-current="false"]) {
+  color: white;
+  transform: scale(2);
+}
